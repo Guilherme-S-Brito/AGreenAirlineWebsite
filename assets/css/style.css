@@ -1,0 +1,158 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Destinations Grid Layout */
+.destinations-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.destination {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .destination img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .destination p {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+/* Fleet Page 2x2 Grid Layout */
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.aircraft {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+    .aircraft img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .aircraft p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+/* Careers Form Styling */
+.careers-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+    .careers-form input,
+    .careers-form select,
+    .careers-form textarea {
+        width: 100%;
+        max-width: 500px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .careers-form button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .careers-form button:hover {
+            background-color: #0056b3;
+        }
+
+/* Footer Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
