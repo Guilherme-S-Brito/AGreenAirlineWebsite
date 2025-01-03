@@ -1,4 +1,4 @@
-/* body */ 
+/* General Body Styling */
 
 body {
     font-family: Arial, sans-serif;
@@ -7,7 +7,7 @@ body {
     background-color: #f8f8f8;
 }
 
-/* body */ 
+/* Header Styling */
 
 header {
     display: flex;
@@ -39,23 +39,29 @@ header nav ul li a {
     font-weight: bold;
 }
 
+/* Main Content */
 
-/*  index main */ 
 main {
     padding: 20px;
     text-align: center;
 }
 
+main p {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.6;
+}
 
 .hero img {
     width: 100%;
     height: auto;
 }
 
-
 /* Destinations Grid Layout */
 
-.destinations-container {
+.destinations-container,
+.destinations-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -71,20 +77,27 @@ main {
     overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-    .destination img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+.destination:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
 
-    .destination p {
-        padding: 10px;
-        font-size: 14px;
-    }
+.destination img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-/* Fleet Page 2x2 Grid Layout */
+.destination p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Fleet Page Grid Layout */
+
 .fleet-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -103,60 +116,78 @@ main {
     padding: 10px;
 }
 
-    .aircraft img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    .aircraft p {
-        margin-top: 10px;
-        font-size: 14px;
-    }
-
-/* Careers page - Form Styling */
-
-.careers-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+.aircraft img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-    .careers-form input,
-    .careers-form select,
-    .careers-form textarea {
-        width: 100%;
-        max-width: 500px;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 14px;
-    }
+.aircraft p {
+    margin-top: 10px;
+    font-size: 14px;
+}
 
-    .careers-form button {
-        padding: 10px 20px;
-        background-color: #096101;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-    }
+/* Footer Styling */
 
-        .careers-form button:hover {
-            background-color: #096101;
-        }
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
 
-/* Footer Links */
-a {
+footer .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .footer-links li a {
     color: #096101;
     text-decoration: none;
+    font-weight: bold;
 }
 
-    a:hover {
-        text-decoration: underline;
+footer .footer-links li a:hover {
+    text-decoration: underline;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #096101;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .destinations-container,
+    .destinations-row,
+    .fleet-container {
+        grid-template-columns: 1fr;
+    }
+
+    .destination,
+    .aircraft {
+        margin-bottom: 20px;
+    }
+}
