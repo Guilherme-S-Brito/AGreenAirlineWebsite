@@ -34,41 +34,38 @@
 
     <!-- Destinations Section -->
 
-           <!-- Navigation Menu -->
-        <section class="destinations-container">              
-            
-                <!-- Slider Wrapper -->
-            <div class="destinations-slider-wrapper">
+    <div class="slider-container">
+        <!-- Radio buttons for controlling the slides -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+        <input type="radio" name="slider" id="slide6">
+    
+        <!-- Slider Images -->
+        <div class="slider">
+            <img src="assets/images/destination1.jpg" alt="Destination 1">
+            <img src="assets/images/destination2.jpg" alt="Destination 2">
+            <img src="assets/images/destination3.jpg" alt="Destination 3">
+            <img src="assets/images/destination4.jpg" alt="Destination 4">
+            <img src="assets/images/destination5.jpg" alt="Destination 5">
+            <img src="assets/images/destination6.jpg" alt="Destination 6">
+        </div>
+    
+        <!-- Navigation Dots -->
+        <div class="dots-container">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+            <label for="slide4" class="dot"></label>
+            <label for="slide5" class="dot"></label>
+            <label for="slide6" class="dot"></label>
+        </div>
+    </div>
+    
 
-                <div class="slider">
 
-                    <img id= "slide-1" src="assets/images/destination1.jpg" alt="Beach Destination"/>                              
-                    <img id= "slide-2" src="assets/images/destination2.jpg" alt="Ancient City Destination"/>                              
-                    <img id= "slide-3" src="assets/images/destination3.jpg" alt="Metropolis Destination"/>                         
-                    <img id= "slide-4" src="assets/images/destination4.jpg" alt="Countryside Destination"/>
-                  
-                </div>
-            </div>
-
-            <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-                <a href="#slide-4"></a>
-            </div>
-
-        </section>
-
-        <section class="cta">
-            <h2>Explore Our Services</h2>
-            <div class="cta-buttons">
-				<img src="assets/images/aircraft_interior.jpg" alt="Aircraft interior">
-                
-                <a href="fleet.html" class="button">Our Fleet</a>
-                <a href="destinations.html" class="button">Destinations</a>
-                <a href="careers.html" class="button">Join Us</a>
-            </div>
-        </section>
     </main>
 
   <!-- Footer links-->
