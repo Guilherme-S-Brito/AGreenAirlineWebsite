@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     background-color: #abd8ad;
     padding: 10px 20px;
-    font-weight: bold; /* Make all text in header bold */
+    font-weight: bold;
 }
 
 .logo img {
@@ -34,6 +34,10 @@ nav ul li a {
     color: #006400;
     font-size: 1em;
     font-weight: bold; /* Ensure links are bold */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Mobile Styles */
@@ -115,7 +119,7 @@ main p {
 }
 
 .destination {
-    background-color: #fff;
+    background-color: #f4fff4;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -152,7 +156,7 @@ main p {
 }
 
 .aircraft {
-    background-color: #fff;
+    background-color: #f4fff4;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
@@ -179,7 +183,7 @@ main p {
 /* Footer Styling */
 
 footer {
-    background-color: #fff;
+    background-color: #abd8ad;
     padding: 20px;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -272,14 +276,14 @@ footer .social-media a:hover {
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: #bbb;
+  background-color: #abd8ad;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
 }
 
-.dot:checked {
-  background-color: #717171;
+.dot:hover {
+  background-color: #096101;
 }
 
 /* Radio buttons to control slides */
