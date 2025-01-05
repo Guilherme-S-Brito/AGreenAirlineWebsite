@@ -8,36 +8,80 @@ body {
 }
 
 /* Header Styling */
-
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    justify-content: space-between;
+    background-color: #abd8ad;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold; /* Make all text in header bold */
 }
 
-header .logo img {
-    height: 50px;
+.logo img {
+    height: 40px;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 20px;
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #006400;
+    font-size: 1em;
+    font-weight: bold; /* Ensure links are bold */
 }
+
+/* Mobile Styles */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggler {
+    display: none;
+    font-size: 1.5em;
+    color: #006400;
+    cursor: pointer;
+    font-weight: bold; /* Bold for the toggler */
+}
+
+.nav-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .nav-toggler {
+        display: block;
+        color: #006400;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #abd8ad;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-toggle:checked ~ nav .nav-menu {
+        display: flex;
+        color: #006400;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+        color: #006400;
+    }
+}
+
 
 /* Main Content */
 
