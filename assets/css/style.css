@@ -12,13 +12,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #abd8ad;
+    background-color: #c9e1ca;
     padding: 10px 20px;
     font-weight: bold;
 }
 
 .logo img {
-    height: 40px;
+    height: 80px;
 }
 
 nav ul {
