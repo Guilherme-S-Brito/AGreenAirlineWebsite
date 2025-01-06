@@ -1,4 +1,5 @@
 /* General Body Styling */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -89,7 +90,9 @@ nav ul li a:hover {
   }
 }
 
+
 /* Main Content */
+
 main {
   padding: 20px;
   text-align: center;
@@ -142,75 +145,82 @@ main p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-/* Slider Styles */
-.slider-container {
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
+/* Destinations Grid Layout */
+
+.destinations-container,
+.destinations-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.destination {
+  background-color: #f4fff4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   overflow: hidden;
-  position: relative;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slider img {
-  width: 100%;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-/* Navigation dots */
-.dots-container {
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.destination img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.destination p {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Fleet Page Grid Layout */
+
+.fleet-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aircraft {
+  background-color: #f4fff4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.aircraft:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.aircraft img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.aircraft p {
   margin-top: 10px;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: #abd8ad;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.dot:hover {
-  background-color: #096101;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  header nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-  }
-
-  .slider-container {
-      width: 100%;
-  }
-
-  .video iframe {
-      width: 100%;
-      height: auto;
-  }
-
-  .dot {
-      height: 10px;
-      width: 10px;
-  }
+  font-size: 14px;
 }
 
 /* Footer Styling */
+
 footer {
   background-color: #abd8ad;
   padding: 20px;
@@ -246,4 +256,219 @@ footer .social-media a {
 
 footer .social-media a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+  }
+
+  .destinations-container,
+  .destinations-row,
+  .fleet-container {
+      grid-template-columns: 1fr;
+  }
+
+  .destination,
+  .aircraft {
+      margin-bottom: 20px;
+  }
+
+.video iframe {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Image Slider */
+/* Basic styling for the slider */
+.slider-container {
+width: 512px;
+margin: auto;
+overflow: hidden;
+position: relative;
+}
+
+.slider {
+display: flex;
+width: 3072px;
+transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+width: 512px;
+max-height: auto;
+flex-shrink: 0;
+overflow: hidden;
+}
+
+/* Navigation dots container */
+.dots-container {
+text-align: center;
+margin-top: 10px;
+}
+
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 5px;
+background-color: #abd8ad;
+border-radius: 50%;
+display: inline-block;
+cursor: pointer;
+}
+
+.dot:hover {
+background-color: #096101;
+}
+
+/* Radio buttons to control slides */
+input[type="radio"] {
+display: none;
+}
+
+/* Slider behavior with radio buttons */
+#slide1:checked ~ .slider {
+transform: translateX(0%);
+}
+
+#slide2:checked ~ .slider {
+transform: translateX(-512px);
+}
+
+#slide3:checked ~ .slider {
+transform: translateX(-1024px);
+}
+
+#slide4:checked ~ .slider {
+transform: translateX(-1536px);
+}
+
+#slide5:checked ~ .slider {
+transform: translateX(-2048px);
+}
+
+#slide6:checked ~ .slider {
+transform: translateX(-2560px); 
+}
+
+/* Dots alignment */
+.dots-container label {
+cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100%;
+  }
+
+  .slider img {
+    width: 100%;
+  }
+
+  .slider {
+    width: auto;
+  }
+
+  #slide1:checked ~ .slider {
+    transform: translateX(0%);
+  }
+
+  #slide2:checked ~ .slider {
+    transform: translateX(-100%);
+  }
+
+  #slide3:checked ~ .slider {
+    transform: translateX(-200%);
+  }
+
+  #slide4:checked ~ .slider {
+    transform: translateX(-300%);
+  }
+
+  #slide5:checked ~ .slider {
+    transform: translateX(-400%);
+  }
+
+  #slide6:checked ~ .slider {
+    transform: translateX(-500%);
+  }
+}
+
+@media (max-width: 480px) {
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+/*  Careers Page */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+p {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #555;
+}
+img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+input, select, textarea, button {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+button {
+  background-color: #258d1b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #258d1b;
 }
