@@ -46,6 +46,7 @@
 
  <!-- Form Script -->
  <!-- Made with assistance from ChatGPT -->
+<!-- cv not used in the acknowledge page, but required if the site would sent the data to a database -->
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -61,6 +62,7 @@
     </script>
 
 <!-- Displaying Candidate Data -->
+<!-- cv not used in the acknowledge page, but required if the site would sent the data to a database -->
 <script>
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -72,21 +74,35 @@
     document.getElementById('cv').textContent = urlParams.get('cv') || 'N/A';
 </script>
 
-  <!-- Footer links-->
+   <!-- Footer links-->
 
-<footer>
+   <footer>
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="destinations.html">Destinations</a></li>
       <li><a href="fleet.html">Fleet</a></li>
       <li><a href="careers.html">Careers</a></li>
     </ul>
+
+    <!-- Social Media links-->
+    <!-- Credit to Code Institute - Love Cycling example-->
     <div class="social-media">
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+        aria-label="Visit our Instagram page (opens in a new tab)">
+        <i class="fa-brands fa-instagram"></i></a>
+
+        <a href="https://linkedin.com" target="_blank" rel="noopener"
+        aria-label="Visit our LinkedIn page (opens in a new tab)">
+        <i class="fa-brands fa-linkedin"></i></a>
+
     </div>
     
   </footer>
+  
+ <!-- Credit to Code Institute - Love Cycling example-->
+  <!-- Font Awesome kit -->
+  <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
