@@ -37,7 +37,7 @@ nav ul li a {
   text-decoration: none;
   color: #006400;
   font-size: 1em;
-  font-weight: bold; /* Ensure links are bold */
+  font-weight: bold; 
 }
 
 nav ul li a:hover {
@@ -54,7 +54,7 @@ nav ul li a:hover {
   font-size: 1.5em;
   color: #006400;
   cursor: pointer;
-  font-weight: bold; /* Bold for the toggler */
+  font-weight: bold; 
 }
 
 .nav-menu {
@@ -291,6 +291,8 @@ footer .social-media a:hover {
 
 /* Image Slider */
 /* Basic styling for the slider */
+/*  Source https://www.thecoderashok.com/blog/automatic-image-slider-in-html-css-only found via Perplexity */
+
 .slider-container {
 width: 512px;
 margin: auto;
@@ -312,6 +314,8 @@ overflow: hidden;
 }
 
 /* Navigation dots container */
+
+
 .dots-container {
 text-align: center;
 margin-top: 10px;
