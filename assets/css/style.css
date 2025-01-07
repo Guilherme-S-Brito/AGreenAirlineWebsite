@@ -306,7 +306,7 @@ transition: transform 0.5s ease-in-out;
 
 .slider img {
 width: 512px;
-max-height: auto;
+max-height: 512px;
 flex-shrink: 0;
 overflow: hidden;
 }
